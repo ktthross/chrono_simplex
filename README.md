@@ -22,7 +22,7 @@ This package is managed by [uv](https://github.com/astral-sh/uv).
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/chrono_simplex.git
+git clone https://github.com/ktthross/chrono_simplex.git
 cd chrono_simplex
 
 # Install dependencies (creates virtual environment automatically)
@@ -37,7 +37,7 @@ For detailed setup instructions, including how to regenerate the lock file witho
 ### Direct from GitHub (without cloning)
 
 ```bash
-uv pip install git+https://github.com/yourusername/chrono_simplex.git
+uv pip install git+https://github.com/ktthross/chrono_simplex.git
 ```
 
 ## Usage

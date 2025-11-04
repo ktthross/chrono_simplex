@@ -13,7 +13,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ### 2. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/chrono_simplex.git
+git clone https://github.com/ktthross/chrono_simplex.git
 cd chrono_simplex
 ```
 
