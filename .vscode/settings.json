@@ -1,0 +1,19 @@
+{
+  // Enable Ruff as the default formatter
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  },
+  // Ruff extension settings
+  "ruff.enable": true,
+  "ruff.lint.enable": true,
+  "ruff.format.enable": true,
+  "ruff.organizeImports": true,
+  // Use the project's virtual environment
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python"
+}
+

@@ -1,0 +1,48 @@
+[project]
+name = "chrono-simplex"
+version = "0.1.0"
+description = "A simple timing package with context manager support"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+authors = [
+    { name = "Your Name", email = "your.email@example.com" }
+]
+license = { text = "MIT" }
+
+[project.urls]
+Homepage = "https://github.com/yourusername/chrono_simplex"
+Repository = "https://github.com/yourusername/chrono_simplex"
+Issues = "https://github.com/yourusername/chrono_simplex/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.3.0",
+    "ruff>=0.14.3",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+]
+ignore = [
+    "E501",  # line too long (handled by formatter)
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
