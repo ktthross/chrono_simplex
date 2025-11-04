@@ -3,7 +3,7 @@ name = "chrono-simplex"
 version = "0.1.0"
 description = "A simple timing package with context manager support"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 dependencies = []
 authors = [
     { name = "Kyle Throssell", email = "ktthross@gmail.com" }
@@ -27,7 +27,7 @@ dev = [
 
 [tool.ruff]
 line-length = 100
-target-version = "py311"
+target-version = "py310"
 
 [tool.ruff.lint]
 select = [

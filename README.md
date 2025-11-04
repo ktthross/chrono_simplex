@@ -14,6 +14,11 @@ A simple Python timing package with context manager support and minimal dependen
 - 🛠️ Pre-commit hooks with Ruff for code quality
 - 💻 VSCode integration with format-on-save
 
+## Requirements
+
+- Python 3.10 or higher
+- [uv](https://github.com/astral-sh/uv) package manager
+
 ## Installation
 
 This package is managed by [uv](https://github.com/astral-sh/uv).
@@ -136,9 +141,9 @@ Configure logging to write to stdout.
 
 ## Development
 
-### Requirements
+### Dev Requirements
 
-- Python >= 3.11
+- Python >= 3.10
 - No runtime dependencies
 - Dev dependencies: `ruff`, `pre-commit`
 
