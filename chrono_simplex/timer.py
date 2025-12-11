@@ -4,10 +4,17 @@ Timer context manager for measuring execution time.
 
 import logging
 import time
+from dataclasses import dataclass
 
 from .formatter import format_time
 
 logger = logging.getLogger(__name__)
+
+
+@dataclass
+class TimingData:
+    raw_time: float
+    formatted_time: str
 
 
 class Timer:
@@ -57,3 +64,18 @@ class Timer:
             logger.info(f" {self.label}: Completed in {self.elapsed_time:.6f} seconds")
 
         return False  # Don't suppress exceptions
+
+    def get_current_timing_data(self) -> TimingData:
+        """
+        Get current timing data without stopping the timer.
+
+        Returns:
+            TimingData with raw_time (float) and formatted_time (str)
+        """
+        if self.start_time is None:
+            raise RuntimeError("Timer has not been started")
+
+        current_time = time.perf_counter()
+        elapsed = current_time - self.start_time
+
+        return TimingData(raw_time=elapsed, formatted_time=format_time(elapsed))
