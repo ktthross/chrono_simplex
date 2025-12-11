@@ -65,7 +65,7 @@ class Timer:
 
         return False  # Don't suppress exceptions
 
-    def get_timing_data(self) -> TimingData:
+    def get_current_timing_data(self) -> TimingData:
         """
         Get current timing data without stopping the timer.
 
@@ -79,18 +79,3 @@ class Timer:
         elapsed = current_time - self.start_time
 
         return TimingData(raw_time=elapsed, formatted_time=format_time(elapsed))
-
-    def stop_and_get_timing_data(self) -> TimingData:
-        """
-        Stop the timer and return timing data.
-
-        Returns:
-            TimingData with raw_time (float) and formatted_time (str)
-        """
-        if self.start_time is None:
-            raise RuntimeError("Timer has not been started")
-
-        self.end_time = time.perf_counter()
-        self.elapsed_time = self.end_time - self.start_time
-
-        return TimingData(raw_time=self.elapsed_time, formatted_time=format_time(self.elapsed_time))
